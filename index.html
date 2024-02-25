@@ -12,10 +12,17 @@
     <header>
         <div class="header-background"></div>
         <div class="person-container">
-            <img class="person-image" src="./assets/person.webp" alt="">
+            <img 
+              class="person-image" 
+              srcset="./assets/person-500w.webp, ./assets/person.webp 1.5x"
+              src="./assets/person.webp"
+              alt="James Johnson"
+            >
             <h1 class="person-name">James Johnson</h1>
         </div>
         <div class="card about-card">
+            <img class="person-image-in-card" src="./assets/person.webp" alt="">
+            <h1 class="person-name-in-card">James Johnson</h1>
             <h2>About me</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cupiditate doloremque nisi dolorem ex sed cumque minus ducimus, illum nam. Laborum blanditiis cupiditate pariatur nulla itaque a. Magni, minima laudantium? Tenetur saepe, mollitia porro eos totam dolores nihil voluptates aperiam praesentium labore.</p>
             <div class="socials about-socials">
@@ -126,7 +133,10 @@
             </div>
         </div>
         <div>
-            <img class="footer-img" src="./assets/person2.jpg" alt="">
+            <picture class="footer-img">
+                <source media="(max-width: 500px)" srcset="./assets/person2-zoom.jpg" />
+                <img src="./assets/person2.jpg" alt="">
+            </picture>
         </div>
     </footer>
 </body>
